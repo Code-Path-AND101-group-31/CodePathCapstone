@@ -4,7 +4,7 @@
     <selectionStates>
       <SelectionState runConfigName="Capstone.app">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2025-08-03T22:47:44.498884900Z">
+        <DropdownSelection timestamp="2025-08-05T23:23:05.371042600Z">
           <Target type="DEFAULT_BOOT">
             <handle>
               <DeviceId pluginId="PhysicalDevice" identifier="serial=R3CW80VT8MB" />

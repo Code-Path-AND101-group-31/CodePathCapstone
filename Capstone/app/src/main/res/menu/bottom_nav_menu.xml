@@ -13,7 +13,7 @@
     <item
         android:id="@+id/nav_result"
         android:icon="@drawable/hamburgernav"
-        android:title="Results"
+        android:title="Results" />
 
     <item
         android:id="@+id/nav_fav"

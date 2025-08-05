@@ -1,11 +1,13 @@
 package com.codepath.capstone
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.LayoutInflater
 import android.widget.FrameLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.widget.NestedScrollView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
@@ -22,6 +24,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val mainLayout = findViewById<View>(R.id.main)
+
+        val searchPillContainer = findViewById<FrameLayout>(R.id.searchPillContainer)
+        searchPillContainer.setOnClickListener {
+            val intent = Intent(this, SearchActivity::class.java)
+            startActivity(intent)
+        }
 
         //******************************************************
         //**** nav bar and main activity container *************
@@ -66,9 +74,22 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun loadLayout(layoutResId: Int){
-        container.removeAllViews()
-        val view = LayoutInflater.from(this).inflate(layoutResId, container, false)
-        container.addView(view)
+        when(layoutResId) {
+            R.layout.activity_main -> {
+                // Show the main content, hide fragment container
+                findViewById<NestedScrollView>(R.id.scrollContainer).visibility = View.VISIBLE
+                container.visibility = View.GONE
+                container.removeAllViews()
+            }
+            else -> {
+                // Hide main content, show fragment container with new layout
+                findViewById<NestedScrollView>(R.id.scrollContainer).visibility = View.GONE
+                container.visibility = View.VISIBLE
+                container.removeAllViews()
+                val view = LayoutInflater.from(this).inflate(layoutResId, container, false)
+                container.addView(view)
+            }
+        }
     }
 
     //*** End of nav bar functionality code block ******
