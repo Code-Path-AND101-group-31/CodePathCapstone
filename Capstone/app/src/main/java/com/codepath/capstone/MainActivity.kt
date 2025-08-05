@@ -12,7 +12,9 @@ import androidx.core.view.updatePadding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
+    //***** main activity container ******
     private lateinit var container: FrameLayout
+    //***** main activity container ******
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,9 +22,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val mainLayout = findViewById<View>(R.id.main)
+
+        //******************************************************
+        //**** nav bar and main activity container *************
         val bottomNavBar = findViewById<BottomNavigationView>(R.id.bottomNavBar) //changed this line to use BottomNavigationView. gives setOnItemSelectedListener method to bottomNavBar -Alex
         container = findViewById(R.id.fragment_container)
+        //**** nav bar and main activity container *************
+        //******************************************************
 
+        //***********************************
+        //***** code for the nav bar ********
         ViewCompat.setOnApplyWindowInsetsListener(mainLayout) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0)
@@ -34,6 +43,10 @@ class MainActivity : AppCompatActivity() {
             v.updatePadding(bottom = systemBars.bottom)
             insets
         }
+        //***** code for the nav bar *******
+        //**********************************
+
+    //***********************************************************************
     //*** code for giving functionality to the nav bar WORK IN PROGRESS -Alex
         loadLayout(R.layout.activity_main)
 
@@ -59,4 +72,5 @@ class MainActivity : AppCompatActivity() {
     }
 
     //*** End of nav bar functionality code block ******
+    //**************************************************
 }
