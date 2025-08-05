@@ -11,14 +11,14 @@
         android:title="Find" />
 
     <item
+        android:id="@+id/nav_result"
+        android:icon="@drawable/hamburgernav"
+        android:title="Results"
+
+    <item
         android:id="@+id/nav_fav"
         android:icon="@drawable/favoritenav"
         android:title="Favorite" />
-
-    <item
-        android:id="@+id/nav_inbox"
-        android:icon="@drawable/inboxnav"
-        android:title="Inbox" />
 
     <item
         android:id="@+id/nav_acc"
