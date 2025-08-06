@@ -1,6 +1,6 @@
 # AND101 Milestone 2 - **Yatra**
 
-<img src="Capstone/app/src/main/res/icon/yatra_icon.png" alt="Yatra Icon" width="200" height="200">
+<img src="Capstone/app/src/main/res/icon/yatra_icon.png" alt="Yatra Icon" width="200" height="300">
 
 Submitted by:
 
