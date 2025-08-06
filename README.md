@@ -1,7 +1,7 @@
 # AND101 Milestone 2 - **Yatra**
 
-![Yatra Logo](Capstone/app/src/main/res/icon/yatra_icon.png)
-
+![Yatra Logo]()
+<img src="Capstone/app/src/main/res/icon/yatra_icon.png" alt="Yatra Icon" width="100" height="100">
 
 Submitted by:
 
