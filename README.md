@@ -1,5 +1,8 @@
 # AND101 Milestone 2 - **Yatra**
 
+![Yatra Logo](Capstone/app/src/main/ic_launcher-playstore.png)
+
+
 Submitted by:
 
 - **Ryan Lawton**
